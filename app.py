@@ -11,3 +11,7 @@ app = Flask(
 def hello_world():
     myName = 'Andersen'
     return f'Hello, World! {myName}'
+
+
+if __name__ == '__main__':
+    app.run()
