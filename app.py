@@ -1,4 +1,6 @@
 from flask import Flask
+from datetime import datetime
+
 app = Flask(
     __name__,
     static_url_path='',
@@ -9,8 +11,8 @@ app = Flask(
 
 @app.route('/')
 def hello_world():
-    myName = 'Andersen'
-    return f'Hello, World! {myName}'
+    now = datetime.now()
+    return f'Hello, World! {now.strftime("%Y%m/%d %H:%M:%S")}'
 
 
 if __name__ == '__main__':
