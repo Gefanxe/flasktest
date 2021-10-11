@@ -19,7 +19,7 @@ handler = WebhookHandler('7cd300df3806d160948ab5609a06ef78')
 @app.route('/')
 def hello_world():
     now = datetime.now()
-    return f'Hello, World! {now.strftime("%Y%m/%d %H:%M:%S")}'
+    return f'Hello, World! {now.strftime("%Y-%m-%d %H:%M:%S")}'
 
 @app.route("/callback", methods=['POST'])
 def callback():
