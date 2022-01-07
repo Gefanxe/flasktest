@@ -21,6 +21,11 @@ def hello_world():
     now = datetime.now()
     return f'Hello, World! {now.strftime("%Y-%m-%d %H:%M:%S")}'
 
+@app.route("/ipcheck", methods=['POST'])
+def ipCheck():
+    ip_address = request.remote_addr
+    return "request ip: " + ip_address
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
